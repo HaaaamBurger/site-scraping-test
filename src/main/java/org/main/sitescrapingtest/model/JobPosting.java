@@ -2,34 +2,37 @@ package org.main.sitescrapingtest.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
 
 @Entity
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class JobPosting {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String positionName;
+    private Long jobId;
+
+    private String title;
+
     private String jobUrl;
+
     private String organizationTitle;
-    private String organizationUrl;
-    private String logoUrl;
-    private String laborFunction;
-    private Long postedTimestamp;
 
-    @ElementCollection
-    private List<String> locations;
+    private String organizationLogo;
 
-    @ElementCollection
-    private List<String> tags;
+    private String workMode;
 
-    @Column(columnDefinition = "TEXT")
-    private String description;
+    private String location;
+
+    private boolean descriptionAvailable;
+
+    private Long postedAt;
 }
