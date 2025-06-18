@@ -3,6 +3,7 @@ package org.main.sitescrapingtest.service;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -17,6 +18,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class JobsScraperService implements JobsScraper {
@@ -34,7 +36,8 @@ public class JobsScraperService implements JobsScraper {
             return jobPostingRepository.saveAll(jobPostings);
 
         } catch (IOException e) {
-            throw new JobScrapingException(e.getMessage());
+            log.error("[JobsScraperService]: {}", e.getMessage());
+            throw new JobScrapingException("Failed to fetch jobs for job function: " + jobFunction);
         }
     }
 
