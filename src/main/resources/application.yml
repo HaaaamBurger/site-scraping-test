@@ -1,10 +1,13 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5444/techstars
+    url: jdbc:postgresql://localhost:5432/techstars?sslmode=disable
     username: admin
     password: admin
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
