@@ -3,7 +3,7 @@ services:
     image: 'postgres:latest'
     environment:
       - 'POSTGRES_DB=techstars'
-      - 'POSTGRES_PASSWORD=pass'
-      - 'POSTGRES_USER=user'
+      - 'POSTGRES_USER=admin'
+      - 'POSTGRES_PASSWORD=admin'
     ports:
-      - '5432'
+      - '5444:5444'

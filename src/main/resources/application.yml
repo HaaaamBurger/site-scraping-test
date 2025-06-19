@@ -1,8 +1,10 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/techstars
-    username: user
-    password: pass
+    url: jdbc:postgresql://localhost:5444/techstars
+    username: admin
+    password: admin
+    driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
       ddl-auto: create-drop
+    show-sql: true

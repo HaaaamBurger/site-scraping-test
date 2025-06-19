@@ -1,52 +1,63 @@
-# Techstars Job Scraper
-
-##  Description
-
-This project is a Spring Boot application that scrapes job listings from [jobs.techstars.com](https://jobs.techstars.com/jobs) based on a selected **Job Function**.  
-The collected job data is stored in an SQL database, including fields such as position title, location, organization, posting date, description, and more.
 
 ---
 
-## ️ Technologies
+### `README.md`
 
-- **Java 17+**
-- **Spring Boot**
-- **Jsoup** (for HTML parsing)
-- **Jackson** (for JSON handling)
-- **JPA / Hibernate** (ORM)
-- **PostgreSQL**
-- **Maven**
+```md
+# Techstars Job Scraper
+
+Java Spring Boot application to scrape jobs from [jobs.techstars.com](https://jobs.techstars.com) by selected **Job Function** (e.g., Software Engineering, Marketing, Product Management, etc).
 
 ---
 
 ## Features
 
-- Accept a specific **Job Function** as input
-- Scrape all jobs filtered by that function
-- Store results in an SQL database
-- (Optional) Export to Google Sheets via API
-- (Optional) Docker support for containerized deployment
+- Scrapes jobs using **Jsoup** and **OkHttp**
+- Supports filtering by **Job Function**
+- Stores data in a **SQL database (PostgreSQL/MySQL)**
+- Follows **clean code** and **OOP principles**
+- Dumps results into SQL file
+- Optional: Docker, multithreading, Google Sheets export
 
 ---
 
-## Job Fields Collected
+## Collected Data
 
-- Position title
+Each job includes:
+
+- Position name
 - Job page URL
 - Organization name
 - Organization logo (image link)
-- Work mode (e.g., Remote, On-site)
+- Labor function
+- Tags
 - Location(s)
 - Posted date (Unix timestamp)
-- Description (HTML format)
-- Tags
+- Job description (HTML format)
 
 ---
 
-##  How to Run
+## Tech Stack
 
-1. Make sure you have:
-    - Java 17+
-    - Maven
-    - PostgreSQL or another SQL database
+- Java 17
+- Spring Boot
+- Jsoup + OkHttp
+- JPA (Hibernate)
+- PostgreSQL
+- Maven
+- Docker (optional)
+- Google Sheets API (optional)
 
+---
+
+## Project Structure
+
+src/
+└── main/
+├── java/org/main/sitescrapingtest/
+│ ├── controller/
+│ ├── model/
+│ ├── service/
+│ └── util/
+└── resources/
+└── application.yml
