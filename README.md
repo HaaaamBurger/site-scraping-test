@@ -27,12 +27,12 @@ Each job includes:
 - Position name
 - Job page URL
 - Organization name
-- Organization logo (image link)
+- Organization logo
 - Labor function
 - Tags
 - Location(s)
-- Posted date (Unix timestamp)
-- Job description (HTML format)
+- Posted date
+- Job description
 
 ---
 
@@ -40,9 +40,8 @@ Each job includes:
 
 - Java 17
 - Spring Boot
-- Jsoup + OkHttp
+- Jsoup
 - JPA (Hibernate)
 - PostgreSQL
 - Maven
 - Docker 
-- Google Sheets API
