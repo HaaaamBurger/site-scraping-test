@@ -30,6 +30,7 @@ import java.util.stream.Collectors;
 public class JobsScraperService implements JobsScraper {
 
     private final JobPostingRepository jobPostingRepository;
+
     private final JobsScraperUtils jobsScraperUtils;
 
     @Transactional

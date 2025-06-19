@@ -45,19 +45,5 @@ Each job includes:
 - JPA (Hibernate)
 - PostgreSQL
 - Maven
-- Docker (optional)
-- Google Sheets API (optional)
-
----
-
-## Project Structure
-
-src/
-└── main/
-├── java/org/main/sitescrapingtest/
-│ ├── controller/
-│ ├── model/
-│ ├── service/
-│ └── util/
-└── resources/
-└── application.yml
+- Docker 
+- Google Sheets API
