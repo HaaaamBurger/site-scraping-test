@@ -12,12 +12,11 @@ Java Spring Boot application to scrape jobs from [jobs.techstars.com](https://jo
 
 ## Features
 
-- Scrapes jobs using **Jsoup** and **OkHttp**
+- Scrapes jobs using **Jsoup**
 - Supports filtering by **Job Function**
-- Stores data in a **SQL database (PostgreSQL/MySQL)**
+- Stores data in a **SQL database (PostgreSQL)**
 - Follows **clean code** and **OOP principles**
-- Dumps results into SQL file
-- Optional: Docker, multithreading, Google Sheets export
+- Dumps results into SQL file in root
 
 ---
 
